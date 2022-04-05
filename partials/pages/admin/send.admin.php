@@ -19,6 +19,7 @@
             <div class="none">
                 <input type="text" name="receiverId" value="<?= getUser()['id'] ?>">
                 <input type="text" name="receiverEmail" value="<?= getUser()['email'] ?>">
+                <input type="text" name="receiverName" value="<?= getUser()['nom'] ?>">
             </div>
             <textarea rows="6" name="msg" id="" class="fieldsed"></textarea>
         </div>

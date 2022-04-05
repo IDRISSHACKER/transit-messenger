@@ -1,3 +1,6 @@
+<div class="logo">
+    <img src="favicon.ico" alt="logo">
+</div>
 <div class="login">
     <section>
         <div class="row">

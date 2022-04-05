@@ -9,9 +9,12 @@ $sidebarW: 300px;
     box-sizing: border-box;
 }
 
-@font-face {
-  font-family: transitFont;
-  src:  url('font/Poppins-Regular.ttf');
+@font-face{
+    font-family:transitFont;
+    src:url("font/Poppins-Regular.ttf"),
+    url("font/Poppins-Bold.ttf"),
+    url("font/Poppins-SemiBold.ttf"),
+    url("font/Poppins-ExtraBold.ttf")
 }
 
 html{

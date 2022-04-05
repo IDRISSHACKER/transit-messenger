@@ -13,7 +13,10 @@
     <div class="master">
         <nav class="navbar">
             <div class="navbar-brand">
-                <a href="index.php" class="title">Messenger</a>
+                <a href="index.php" class="title">
+                    <img src="favicon.ico" />
+                    <h4>TransitMessenger</h4>
+                </a>
             </div>
             <div class="navbar-actions">
                 <ul>
@@ -34,7 +37,7 @@
                                     <li>
                                         <img src="../asset/icon/user.svg" alt="" srcset="">
                                     </li>
-                                    <li>
+                                    <li class="bolder">
                                         <?= @$_SESSION["user"]["nom"] ?>
                                     </li>
                                 </ul>

@@ -9,6 +9,9 @@ require 'vendor/autoload.php';
 $success = false;
 $successMsg = "";
 
+$error = false;
+$errorMsg = "";
+
 function saveMsgInDatabase($sender, $receiver, $msg)
 {
     global $PDO;
@@ -66,7 +69,7 @@ function sendEmail($email, $name, $subject, $msg)
             return false;
         }
     } catch (Exception $e) {
-        die("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
+        return false;
     }
 }
 
@@ -75,6 +78,8 @@ function setMsg()
 {
     global $success;
     global $successMsg;
+    global $error;
+    global $errorMsg;
 
     if (isset($_POST["sendMsg"])) {
         $sender = $_SESSION["user"]["id"];
@@ -86,10 +91,17 @@ function setMsg()
         $subject = "Reponse de votre demande | Africa transit Messeger";
 
         if (!empty($msg)) {
-            if (sendEmail($receiverEmail, $receiverName, $subject, parseMailContent($msg)))
+            if (sendEmail($receiverEmail, $receiverName, $subject, parseMailContent($msg))) {
                 $success = true;
-            saveMsgInDatabase($sender, $receiver, $msg);
-            $successMsg = "Votre mail à bien été envoyé";
+                saveMsgInDatabase($sender, $receiver, $msg);
+                $successMsg = "Votre mail à bien été envoyé";
+            } else {
+                $error = true;
+                $errorMsg = "Le mail n'as pas pu être envoyé, vérifiez votre connexion internet. ";
+            }
+        } else {
+            $error = true;
+            $errorMsg = "Vous ne pouvez pas envoyer un mail vide :) ";
         }
     }
 }

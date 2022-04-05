@@ -5,7 +5,13 @@
     width: 100%;
 
     thead{
-        font-weight: 500;
+        font-weight: 800;
+
+        tr{
+            td{
+                opacity: 1 !important;
+            }
+        }
     }
 
     tr{
@@ -15,6 +21,11 @@
 
         td{
             padding: 1rem 2rem;
+            opacity: .8;
+
+            &:nth-child(1){
+                opacity: 1 !important;
+            }
         }
 
         &:nth-child(odd){

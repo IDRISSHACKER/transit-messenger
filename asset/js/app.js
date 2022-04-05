@@ -1,24 +1,28 @@
-function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+const CHOICE_ACTIVE = "choice-active";
 
-var _this = this;
+const choices = () => {
 
-var CHOICE_ACTIVE = "choice-active";
-
-var choices = function choices() {
-    var _this2 = this;
-
-    _newArrowCheck(this, _this);
-
-    var allChoices = [].concat(document.querySelectorAll(".choice"));
+    var allChoices = [...document.querySelectorAll(".choice")];
     allChoices.map(function (choice) {
-        _newArrowCheck(this, _this2);
-
         choice.addEventListener("click", function () {
             var activeChoice = document.querySelector("." + CHOICE_ACTIVE);
             activeChoice.classList.remove(CHOICE_ACTIVE);
             this.classList.add(CHOICE_ACTIVE);
         });
-    }.bind(this));
-}.bind(this);
+    });
+};
 
+const alert = () => {
+    const alertFlag = document.querySelector(".alert");
+
+    if (alertFlag !== null) {
+
+        setTimeout(() => {
+            alertFlag.remove();
+        }, 9000)
+
+    }
+}
+
+alert();
 choices();

@@ -1,6 +1,9 @@
 <?php if ($success) { ?>
     <div class="alert alert-success"><?= @$successMsg ?></div>
 <?php } ?>
+<?php if ($error) { ?>
+    <div class="alert alert-danger"><?= @$errorMsg ?></div>
+<?php } ?>
 <div class="destinataire">
     <div class="avatar">
         <img src="../../../asset/icon/userW.svg" alt="">

@@ -15,7 +15,7 @@
         a{
             text-decoration: none;
             color: $color;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.3rem;
         }
     }
@@ -88,6 +88,7 @@
                     width: 100%;
                     display: block;
                     transition: all linear 250ms;
+                    font-size: 0.9rem;
 
                     &:hover{
                         background: lighten($color: $color, $amount: 35);
@@ -111,4 +112,16 @@
 
 .sidebar-active{
     margin-left: calc($sidebarW + 2rem) !important;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    img{
+        width: 40px;
+        height: auto;
+    }
 }

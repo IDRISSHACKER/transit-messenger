@@ -23,7 +23,7 @@ function parseMailContent($content)
     return "
     <div style='background: white; max-width: 650px; border-radius: 10px; padding: 30px; margin: auto;'>
         <h1 style='text-align: center; color: #4b44be; display: block'>Arica Transit Messenger</h1>    
-        <p style='text-align: center; font-size: 1.2rem; display: block'>$content</p>
+        <p style='text-align: center; font-size: 1.2rem; display: block; opacity: 0.7'>$content</p>
         <div style='display: flex; align-items-center'>
             <a href='messenger.test' style='background: #4b44be; color:white; text-decoration: none; padding: 20px; cursor: pointer; border-radius: 4px; font-size: 1.2rem; display: block; text-align: center'>Africa Transit Messenger</a>
         </div>

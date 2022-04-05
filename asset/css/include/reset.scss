@@ -9,9 +9,14 @@ $sidebarW: 300px;
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: transitFont;
+  src:  url('font/Poppins-Regular.ttf');
+}
+
 html{
     background: #f0f3f5;
-    font-family: "Poppins";
+    font-family: transitFont;
 }
 
 .container{

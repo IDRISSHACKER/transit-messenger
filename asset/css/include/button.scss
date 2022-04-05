@@ -1,0 +1,128 @@
+$danger: #e73365;
+
+.btn{
+    text-decoration: none;
+    padding: .5rem 2rem;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
+    color: #2A2A2A;
+    font-size: 500;
+}
+
+.btn-primary{
+    color: white;
+    background: $color;
+    transition: all linear 300ms;
+    &:hover{
+        background: $colorAccent;
+    }
+}
+
+.btn-danger{
+    color: white;
+    background: $danger;
+    transition: all linear 300ms;
+    &:hover{
+        background: darken($color: $danger, $amount: 20);
+    }
+}
+
+.btn-secondary{
+    width: 100%;
+    color: #e73365 !important;
+    background: transparent;
+    background: lighten($color: #e73365, $amount: 42);
+    font-weight: 400;
+
+    &:hover{
+        background: lighten($color: #e73365, $amount: 30);
+    }
+}
+
+.btn-lg{
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+}
+
+.btn-more{
+    .more{
+        text-align: center;
+        font-weight: 700;
+        font-size: 2rem;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: solid 2px #ddd;
+        margin: 0;
+        transition: all linear 300ms;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        cursor: pointer;
+
+        div{
+            background: rgba($color: #2A2A2A, $alpha: .5);
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+        }
+
+        &:hover{
+            border: solid 2px darken($color: #ddd, $amount: 20);
+
+            div{
+                background: rgba($color: #2A2A2A, $alpha: 1);
+            }
+
+            transform: scale(1.1);
+        }
+    }
+    &:hover{
+        .more-menu{
+            display: block;
+        }    
+    }
+    .more-menu{
+        z-index: 2;
+        background: white;
+        box-shadow: 2px 1px 1px -2px rgb(0 0 0/20%) 2px 1px 1px -2px rgb(0 0 0/10%) 2px 1px 1px -2px rgb(0 0 0/20%);
+        border-radius: 5px;
+        position: absolute;
+        display: none;
+
+
+        ul{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            li{
+                list-style: none;
+                border-bottom: solid .5px rgb(0 0 0/5%);
+                padding: .5rem;
+                width: 100%;
+                &:hover{
+                    background: rgb(0 0 0/1%);
+                }
+                a, button{
+                    text-decoration: none;
+                    color: lighten($color: #2A2A2A, $amount: 15);
+                    font-size: .8rem;
+
+                    &:hover{
+                     color: #2A2A2A;   
+                    }
+                }
+            }
+        }
+    }
+}
+
+.h{
+    height: 40px;
+    width: 40px;
+}

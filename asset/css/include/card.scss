@@ -1,0 +1,77 @@
+$secondayColor: #0083e7;
+
+.card{
+    background: white;
+    padding: 2rem;
+    border-radius: .7rem;
+    width: 100%;
+    height: 200px;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    transition: all linear 500ms;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    .title{
+        font-size: 1rem;
+        color: rgba(1, 7, 12, 0.966);
+        line-height: 1.334em;
+        font-weight: 500;
+        margin: 0px;
+    }
+
+    .content{
+        margin: 14px 8px 6px 0px;
+        line-height: 1.334em;
+        font-family: Poppins, sans-serif;
+        font-size: 2.125rem;
+        font-weight: 500;
+    }
+}
+
+.card-primary{
+    background: $color;
+    .content{
+        color: white;
+    }
+    .title{
+        color: lighten($color: $color, $amount: 15)
+    }
+}
+.card-secondary{
+    background: $secondayColor;
+    .content{
+        color: white;
+    }
+    .title{
+        color: lighten($color: $secondayColor, $amount: 15)
+    }
+}
+
+.explain{
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+    .explain-card{
+        max-width: 300px;
+        .explain-img{
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .explain-slogan{
+            opacity: .7;
+            font-weight: 500;
+        }
+    }
+}
+
+.banner-title{
+    font-size: 1.2rem;
+    opacity: .75;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+}

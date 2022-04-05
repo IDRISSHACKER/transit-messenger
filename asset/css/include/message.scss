@@ -1,0 +1,15 @@
+.message{
+    .illus{
+        max-width: 400px !important;
+    }
+
+    .form{
+        width: 500px !important;
+        .form-group{
+            width: 100% !important;
+            .form-control{
+                width: 100% !important;
+            }
+        }
+    }
+}

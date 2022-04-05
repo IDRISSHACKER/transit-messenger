@@ -1,0 +1,44 @@
+$alertColor: rgb(235, 68, 96);
+$successColor: #007624;
+.alert{
+    padding: 10px;
+    width: 100%;
+    border-radius: .2rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.alert-danger{
+    color: $alertColor;
+    background: lighten($color: $alertColor, $amount: 40);
+    border: solid 1px lighten($color: $alertColor, $amount: 30);
+}
+
+.alert-success{
+    color: $successColor;
+    background: lighten($color: $successColor, $amount: 40);
+    border: solid 1px lighten($color: $successColor, $amount: 30);
+}
+
+.msg-success{
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+        max-width: 700px;
+    }
+
+    .title{
+        font-size: 2rem;
+        opacity: .9;
+    }
+
+    .content{
+        font-size: 1.3rem;
+        opacity: .6;
+    }
+}

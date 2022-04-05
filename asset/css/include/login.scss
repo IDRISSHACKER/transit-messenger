@@ -1,0 +1,64 @@
+@keyframes showIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.login{
+    .form{
+        .form-group{
+            width: 400px;
+            padding-bottom: 5rem;
+
+            .btn{
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.menu-login{
+    position: relative;
+    .logbtn{
+
+    }
+
+     &:hover{
+        .menu{
+            animation: showIn linear 300ms;
+            display: block !important;
+            transition: all linear ease 1s;
+        }
+    }
+    .menu{
+        transition: all linear ease 1s;
+        position: absolute;
+        background: #fff;
+        width:200px;
+        padding: 2rem 1rem;
+        right: -20px;
+        display: none;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li{
+                padding-bottom: 1rem;
+                border-bottom: solid 1px rgb(0 0 0/10%);
+                list-style: none;
+            }
+
+            li:nth-child(2){
+                border-bottom: none;
+            }
+        }
+    }
+}

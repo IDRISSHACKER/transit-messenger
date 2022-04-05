@@ -1,0 +1,30 @@
+$containerSize : 1100px;
+$navbarW: 60px;
+$sidebarH: calc(100vh - $navbarW);
+$sidebarW: 300px;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: #f0f3f5;
+    font-family: "Poppins";
+}
+
+.container{
+    max-width: $containerSize;
+    margin: auto;
+}
+
+.main-container{
+    padding-top: calc($navbarW + 1rem);
+    max-width: $containerSize;
+    margin: auto;
+}
+
+.none{
+    display: none;
+}

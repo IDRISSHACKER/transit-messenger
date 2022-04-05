@@ -1,0 +1,27 @@
+.choices{
+    margin-top: 1rem;
+    .choice{
+        padding: 10px;
+        border: solid 1px #ddd;
+        height: 90px;
+        width: 110px;
+        font-size: .8rem;
+        border-radius: .3rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+
+    .choice-active{
+        border-color: $color;
+        background: lighten($color, 47);
+    }
+}

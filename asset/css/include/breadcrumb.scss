@@ -1,0 +1,46 @@
+$crumb-h: 60px;
+
+.breadcrumb{
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        li{
+            list-style: none;
+            font-weight: 500;
+            opacity: .9;
+            position: relative;
+            a{
+                text-decoration: none;
+                color: $color;
+                transition: all linear 200ms;
+                &:hover{
+                    color: darken($color: $color, $amount: 10);
+                }
+            }
+
+            &:nth-child(1){
+                opacity: 1;
+
+                &::before{
+                    display: none;
+                }
+            }
+
+            &::before{
+                content: ">";
+                display: block;
+                color: darken($color: $color, $amount: 40);
+                font-size: 1.4rem;
+                font-weight: 600;
+                position: absolute;
+                left: -20px;
+                top: -4px;
+            }
+        }
+    }
+}

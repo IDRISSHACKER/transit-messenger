@@ -1,0 +1,114 @@
+
+
+.navbar{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem 0rem 2rem;
+    width: 100%;
+    height: $navbarW;
+    position: fixed;
+    z-index: 4;
+
+    .navbar-brand{
+        a{
+            text-decoration: none;
+            color: $color;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+    }
+    .navbar-actions{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            li{
+                list-style: none;
+
+                img{
+                    width: 40px;
+                    height: auto;
+                    opacity: .5;
+                    transition: all linear 300ms;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0;
+                        color: #2A2A2A;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.master{
+    .master-body{
+        display: flex;
+    }
+}
+
+.sidebar{
+    width: $sidebarW;
+    height: $sidebarH;
+    background: #fff;
+    z-index: 3;
+    position: fixed;
+    margin-top: $navbarW;
+
+    .sidebar-content{
+        margin: 1rem;
+        padding: 1rem;
+
+        ul{
+            li{
+                list-style: none;
+                margin-bottom: 1rem;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    color: #2A2A2A;
+                    background: rgba(lighten($color: $color, $amount: 41), .3);
+                    padding: 15px;
+                    border-radius: 10px;
+                    width: 100%;
+                    display: block;
+                    transition: all linear 250ms;
+
+                    &:hover{
+                        background: lighten($color: $color, $amount: 35);
+                        color: $color;
+                    }
+
+                }
+
+                .link-active{
+                    background: lighten($color: $color, $amount: 35);
+                    color: $color;
+                }
+            }
+        }
+    }
+}
+
+.cont{
+    width: 100%;
+}
+
+.sidebar-active{
+    margin-left: calc($sidebarW + 2rem) !important;
+}
